@@ -1,12 +1,7 @@
 import glob
-import scipy.io as sio
 import torch
-from torch.utils.data import Dataset, DataLoader, random_split
+from torch.utils.data import Dataset
 import numpy as np
-from sklearn.model_selection import train_test_split
-import random
-import pickle
-from os import path
 
 
 def UT_HAR_dataset(root_dir, portion=None):
