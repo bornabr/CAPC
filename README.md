@@ -28,6 +28,16 @@ conda activate CAPC
 
 **Note:** I suggest use [mamba](https://github.com/mamba-org/mamba) instead of conda for faster environment creation.
 
+## Datasets
+
+1. SignFi Dataset
+
+The expanded version of the dataset can be downloaded from [here](https://drive.google.com/file/d/1ywEbg6bJ5hLO9zeYbBfMlGvsMCz_BHcu/view?usp=sharing). This dataset is similar to the [original SignFi dataset]{https://yongsen.github.io/SignFi/}, but it is in npy format and works with our data loader.
+
+2. UT HAR Dataset
+
+Similar to SignFi, the expanded version of UT HAR can be downloaded from [here](https://drive.google.com/file/d/171IN6D6n81zkD_M0yClBDo3lNvSfAghS/view?usp=sharing).
+
 ---
 
 For inquiries, please reach out via [email](mailto:bornab@yorku.ca).
