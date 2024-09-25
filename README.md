@@ -38,6 +38,56 @@ The expanded version of the dataset can be downloaded from [here](https://drive.
 
 Similar to SignFi, the expanded version of UT HAR can be downloaded from [here](https://drive.google.com/file/d/171IN6D6n81zkD_M0yClBDo3lNvSfAghS/view?usp=sharing).
 
+**Note:** The UT HAR dataset is only used for supervised evaluation and transfer learning experiments. All of self-supervised training is done on the SignFi dataset lab environment data.
+
+## Training and Evaluation
+
+### Self-supervised Stage
+
+Use the following command to check what arguments are available for training the self-supervised stage:
+
+```bash
+python train_ssl.py -h
+```
+
+Example command to train the self-supervised stage:
+
+```bash
+python self_supervised.py --database-path "path to the dataset"
+```
+
+### Supervised Evaluation Stage
+
+Use the following command to check what arguments are available for training the supervised stage:
+
+```bash
+python supervised.py -h
+```
+
+#### Linar Evaluation
+
+In this mode, we freeze the pre-trained encoder and train a linear classifier on top of it. Example command:
+
+```bash
+python supervised.py --database-path "path to the dataset" --database "SignFi"
+```
+
+#### Semi-supervised Evaluation
+
+In this mode, we fine-tune the pre-trained encoder alongside the linear classifier but with a lower learning rate than the linear classifier. Example command:
+
+```bash
+python supervised.py --database-path "path to the dataset" --database "SignFi" --semi-supervised --lr-encoder 5e-3
+```
+
+#### Supervised Baseline
+
+In this mode, we train the encoder and the linear classifier from scratch. Example command:
+
+```bash
+python supervised.py --database-path "path to the dataset" --database "SignFi" --embedding-size 128 --num_frames 10
+```
+
 ---
 
 For inquiries, please reach out via [email](mailto:bornab@yorku.ca).
