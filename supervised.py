@@ -14,6 +14,7 @@ def get_args():
 	"""Returns the arguments for the script"""
 
 	parser = argparse.ArgumentParser(description='Self-supervised learning script')
+	parser.add_argument('--database-path', type=str, default=None, help='Path to the database')
 	parser.add_argument('--debug', action='store_true', help='Enable debug mode')
 	parser.add_argument('--wandb', action='store_true', help='Enable wandb logging')
 	parser.add_argument('--wandb_name', type=str, default=None, help='Wandb run name')
@@ -40,7 +41,7 @@ def get_database_config(args):
 
 	if args.database == 'SignFi':
 		dataset = {
-			'root_dir': '/local/data0/Borna/Projects/SignFi Dataset/',
+			'root_dir': '/local/data0/Borna/Projects/SignFi Dataset/' if args.database_path is None else args.database_path,
 			'batch_size': args.batch_size,
 			'type': 'SignFi',
 			'name': 'SignFi_Home',
@@ -59,7 +60,7 @@ def get_database_config(args):
 		}
 	elif args.database == 'UT_HAR':
 		dataset = {
-			'root_dir': '/home/bornab/Projects/WiFi-CSI-Sensing-Benchmark/Data/',
+			'root_dir': '/home/bornab/Projects/WiFi-CSI-Sensing-Benchmark/Data/' if args.database_path is None else args.database_path,
 			'batch_size': args.batch_size,
 			'type': 'UT_HAR',
 			'name': 'UT_HAR',
