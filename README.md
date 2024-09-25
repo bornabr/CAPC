@@ -85,7 +85,7 @@ python supervised.py --database-path "path to the dataset" --database "SignFi" -
 In this mode, we train the encoder and the linear classifier from scratch. Example command:
 
 ```bash
-python supervised.py --database-path "path to the dataset" --database "SignFi" --embedding-size 128 --num_frames 10
+python supervised.py --database-path "path to the dataset" --database "SignFi" --supervised --embedding-size 128 --num_frames 10
 ```
 
 ---
