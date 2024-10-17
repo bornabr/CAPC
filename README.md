@@ -47,7 +47,7 @@ Similar to SignFi, the expanded version of UT HAR can be downloaded from [here](
 Use the following command to check what arguments are available for training the self-supervised stage:
 
 ```bash
-python train_ssl.py -h
+python self_supervised.py -h
 ```
 
 Example command to train the self-supervised stage:
