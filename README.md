@@ -1,8 +1,7 @@
 # Context-Aware Predictive Coding: A Representation Learning Framework for WiFi Sensing
 
-This repository contains the PyTorch implementation of **Context-Aware Predictive Coding: A Representation Learning Framework for WiFi Sensing**. 
+This repository contains the PyTorch implementation of  [Context-Aware Predictive Coding: A Representation Learning Framework for WiFi Sensing](https://arxiv.org/abs/2410.01825).
 
-**Note:** The repository is still under development and the code will be available soon. Please contact me if you have any specific questions.
 
 ## Abstract
 
@@ -86,6 +85,20 @@ In this mode, we train the encoder and the linear classifier from scratch. Examp
 
 ```bash
 python supervised.py --database-path "path to the dataset" --database "SignFi" --supervised --embedding-size 128 --num_frames 10
+```
+
+## Citation
+
+If you use this code in your research, please cite our paper:
+
+```bibtex
+@article{barahimi2024context,
+  title={Context-Aware Predictive Coding: A Representation Learning Framework for WiFi Sensing},
+  author={Barahimi, Borna and Tabassum, Hina and Omer, Mohammad and Waqar, Omer},
+  journal={IEEE Open Journal of the Communications Society},
+  year={2024},
+  publisher={IEEE}
+}
 ```
 
 ---
