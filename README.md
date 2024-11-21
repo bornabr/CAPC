@@ -103,4 +103,4 @@ If you use this code in your research, please cite our paper:
 
 ---
 
-For inquiries, please reach out via [email](mailto:bornab@yorku.ca).
+For inquiries, please reach out via [email](mailto:bornabarahimi@gmail.com).
